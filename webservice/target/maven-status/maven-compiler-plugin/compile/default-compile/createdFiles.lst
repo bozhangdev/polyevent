@@ -1,0 +1,10 @@
+fr/polytech/datasource/Demand.class
+fr/polytech/webservice/OrganiserWebService.class
+fr/polytech/datasource/Event.class
+fr/polytech/datasource/Order.class
+fr/polytech/webservice/AdminWebService.class
+fr/polytech/datasource/Material.class
+fr/polytech/webservice/OrganiserWebServiceImpl.class
+fr/polytech/webservice/LogInWebServiceImpl.class
+fr/polytech/webservice/LogInWebService.class
+fr/polytech/webservice/AdminWebServiceImpl.class

@@ -1,0 +1,6 @@
+d:\documents\visual studio 2017\Projects\Room\Room\bin\Debug\Room.dll.config
+d:\documents\visual studio 2017\Projects\Room\Room\bin\Debug\Room.dll
+d:\documents\visual studio 2017\Projects\Room\Room\bin\Debug\Room.pdb
+d:\documents\visual studio 2017\Projects\Room\Room\obj\Debug\Room.dll
+d:\documents\visual studio 2017\Projects\Room\Room\obj\Debug\Room.pdb
+d:\documents\visual studio 2017\Projects\Room\Room\obj\Debug\Room.csprojResolveAssemblyReference.cache

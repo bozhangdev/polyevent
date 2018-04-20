@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.polytech.fr/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="LogInWebServiceImplService" targetNamespace="http://webservice.polytech.fr/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.polytech.fr/" elementFormDefault="unqualified" targetNamespace="http://webservice.polytech.fr/" version="1.0">
+
+  <xs:element name="logIn" type="tns:logIn"/>
+
+  <xs:element name="logInResponse" type="tns:logInResponse"/>
+
+  <xs:complexType name="logIn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="logInResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="logInResponse">
+    <wsdl:part element="tns:logInResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logIn">
+    <wsdl:part element="tns:logIn" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LogInWebService">
+    <wsdl:operation name="logIn">
+      <wsdl:input message="tns:logIn" name="logIn">
+    </wsdl:input>
+      <wsdl:output message="tns:logInResponse" name="logInResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LogInWebServiceImplServiceSoapBinding" type="tns:LogInWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="logIn">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="logIn">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="logInResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LogInWebServiceImplService">
+    <wsdl:port binding="tns:LogInWebServiceImplServiceSoapBinding" name="LogInWebServiceImplPort">
+      <soap:address location="http://localhost:8080//LogInWebServiceImplService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

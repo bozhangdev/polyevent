@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.polytech.fr/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="AdminWebServiceImplService" targetNamespace="http://webservice.polytech.fr/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.polytech.fr/" elementFormDefault="unqualified" targetNamespace="http://webservice.polytech.fr/" version="1.0">
+
+  <xs:element name="addEvent" type="tns:addEvent"/>
+
+  <xs:element name="addEventResponse" type="tns:addEventResponse"/>
+
+  <xs:complexType name="addEvent">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="addEventResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addEventResponse">
+    <wsdl:part element="tns:addEventResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addEvent">
+    <wsdl:part element="tns:addEvent" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AdminWebService">
+    <wsdl:operation name="addEvent">
+      <wsdl:input message="tns:addEvent" name="addEvent">
+    </wsdl:input>
+      <wsdl:output message="tns:addEventResponse" name="addEventResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AdminWebServiceImplServiceSoapBinding" type="tns:AdminWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addEvent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addEventResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminWebServiceImplService">
+    <wsdl:port binding="tns:AdminWebServiceImplServiceSoapBinding" name="AdminWebServiceImplPort">
+      <soap:address location="http://localhost:8080//AdminWebServiceImplService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
